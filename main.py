@@ -1,7 +1,7 @@
 import pygame
 import random
 import sys
-from GameOfLife import GameOfLife
+from game_of_life import GameOfLife
 
 def draw_grid(frame, matrix, width, height, cell_size, show_grid=True):
     '''
