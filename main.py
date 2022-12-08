@@ -123,5 +123,14 @@ def main():
         redraw_window(window, matrix, width, height, cell_size, show_grid=show_grid)
         matrix = game.update_generation()
 
+        for e in pygame.event.get():
+            # Pressing escape key or close button
+            if e.type == pygame.QUIT or \
+                (e.type == pygame.KEYDOWN and e.key == pygame.K_ESCAPE):
+                flow = False
+    
+    pygame.quit()
+
+
 if __name__ == '__main__':
     main()
